@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GHY International — Canadian & US Customs Broker Since 1901</title>
+<meta name="description" content="GHY has helped businesses cross borders compliantly since 1901. Expert customs brokerage, trade compliance & duty recovery — We Free Trade™.">
+<meta name="keywords" content="Canadian customs broker, US customs brokerage, customs clearance Canada, North American trade compliance">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --blue: #006692;
+    --blue-dark: #004e70;
+    --blue-deeper: #003a54;
+    --gold: #c9a84d;
+    --gold-light: #e2c47a;
+    --gold-pale: #f5ecd0;
+    --white: #ffffff;
+    --off-white: #f8f6f1;
+    --gray-light: #eceae4;
+    --gray-mid: #9e9b93;
+    --gray-dark: #4a4845;
+    --text: #1e1d1b;
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--text);
+    background: var(--white);
+    font-size: 16px;
+    line-height: 1.65;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 200;
+    background: rgba(0,30,46,0.97);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(201,168,77,0.2);
+  }
+
+  .nav-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    height: 64px;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .nav-logo-mark {
+    width: 40px;
+    height: 40px;
+    background: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--blue-deeper);
+    letter-spacing: -0.5px;
+    flex-shrink: 0;
+  }
+
+  .nav-logo-text {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--white);
+    letter-spacing: 0.02em;
+  }
+
+  .nav-logo-text span {
+    color: var(--gold);
+    font-size: 11px;
+    display: block;
+    font-family: var(--font-body);
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-top: -2px;
+  }
+
+  .nav-main {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    list-style: none;
+  }
+
+  .nav-item {
+    position: relative;
+  }
+
+  .nav-item > a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: rgba(255,255,255,0.82);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 8px 14px;
+    transition: color 0.2s;
+    white-space: nowrap;
+  }
+
+  .nav-item > a:hover { color: var(--gold); }
+
+  .nav-item > a .chevron {
+    width: 10px;
+    height: 10px;
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+    transform: rotate(45deg) translateY(-2px);
+    display: inline-block;
+    transition: transform 0.2s;
+  }
+
+  .nav-item:hover > a .chevron { transform: rotate(225deg) translateY(-2px); }
+
+  .nav-cta-btn {
+    background: var(--gold);
+    color: var(--blue-deeper) !important;
+    padding: 9px 18px !important;
+    font-weight: 700 !important;
+    margin-left: 8px;
+  }
+
+  .nav-cta-btn:hover { background: var(--gold-light); color: var(--blue-deeper) !important; }
+
+  /* MEGA MENU */
+  .mega-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #002236;
+    border: 1px solid rgba(201,168,77,0.2);
+    border-top: 2px solid var(--gold);
+    min-width: 220px;
+    padding: 8px 0;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    z-index: 300;
+  }
+
+  .mega-menu.wide {
+    left: 0;
+    transform: none;
+    min-width: 680px;
+    padding: 28px 32px;
+    display: none;
+  }
+
+  .nav-item:hover .mega-menu { display: block; }
+  .nav-item:hover .mega-menu.wide { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+
+  .mega-menu a {
+    display: block;
+    padding: 9px 20px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    transition: color 0.15s, background 0.15s;
+    white-space: nowrap;
+  }
+
+  .mega-menu a:hover { color: var(--gold); background: rgba(201,168,77,0.06); }
+
+  .mega-col-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(201,168,77,0.2);
+  }
+
+  .mega-col a {
+    display: block;
+    padding: 7px 0;
+    font-size: 13px;
+    color: rgba(255,255,255,0.72);
+    text-decoration: none;
+    transition: color 0.15s;
+    white-space: normal;
+  }
+
+  .mega-col a:hover { color: var(--gold); }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: var(--blue-deeper);
+    overflow: hidden;
+  }
+
+  .hero-starfield {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 50%, rgba(0,102,146,0.4) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 20%, rgba(201,168,77,0.1) 0%, transparent 50%),
+      linear-gradient(160deg, #001f2e 0%, #003a54 40%, #004e70 100%);
+  }
+
+  .hero-stars {
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 15% 25%, rgba(255,255,255,0.7) 0%, transparent 100%),
+      radial-gradient(1px 1px at 35% 10%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 55% 35%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 70% 15%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 85% 40%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 25% 60%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 90% 70%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 10% 80%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 45% 75%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 60% 55%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 75% 85%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 30% 45%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 50% 90%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 5% 50%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 95% 30%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 20% 90%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 65% 5%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 40% 20%, rgba(201,168,77,0.4) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 80% 60%, rgba(201,168,77,0.3) 0%, transparent 100%);
+  }
+
+  .hero-grid-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 300px;
+    background: linear-gradient(0deg, rgba(0,102,146,0.15) 0%, transparent 100%);
+    background-image: repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 80px),
+                      repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 80px);
+  }
+
+  .hero-1901-mark {
+    position: absolute;
+    right: 6%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: right;
+    opacity: 0.12;
+    pointer-events: none;
+  }
+
+  .hero-1901-mark .year {
+    font-family: var(--font-display);
+    font-size: clamp(120px, 18vw, 240px);
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 0.85;
+    letter-spacing: -4px;
+    display: block;
+  }
+
+  .hero-1901-mark .est {
+    font-family: var(--font-body);
+    font-size: 14px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    text-align: right;
+    margin-top: 8px;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 40px 80px;
+    width: 100%;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .hero-heading {
+    font-family: var(--font-display);
+    font-size: clamp(42px, 6vw, 80px);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.05;
+    letter-spacing: -1px;
+    max-width: 700px;
+    margin-bottom: 12px;
+  }
+
+  .hero-tagline {
+    font-family: var(--font-display);
+    font-size: clamp(20px, 2.5vw, 30px);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--gold);
+    margin-bottom: 28px;
+    letter-spacing: 0.01em;
+  }
+
+  .hero-sub {
+    font-size: 17px;
+    color: rgba(255,255,255,0.72);
+    max-width: 560px;
+    line-height: 1.7;
+    margin-bottom: 44px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--blue-deeper);
+    padding: 14px 28px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    display: inline-block;
+  }
+
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    padding: 14px 28px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.35);
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+    display: inline-block;
+  }
+
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+  .hero-trust-bar {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 32px;
+  }
+
+  .trust-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .trust-num {
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .trust-label {
+    font-size: 12px;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-top: 3px;
+  }
+
+  .trust-divider {
+    width: 1px;
+    height: 36px;
+    background: rgba(255,255,255,0.12);
+  }
+
+  /* GOLD FEATURE BAR */
+  .feature-bar {
+    background: var(--gold);
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+
+  .feature-bar-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--blue-deeper);
+  }
+
+  .feature-bar-item::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--blue-deeper);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* SECTION BASE */
+  section { padding: 88px 40px; }
+
+  .section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-eyebrow::after {
+    content: '';
+    flex: 0 0 28px;
+    height: 1px;
+    background: var(--blue);
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3.5vw, 42px);
+    font-weight: 700;
+    color: var(--blue-deeper);
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+
+  .section-sub {
+    font-size: 17px;
+    color: var(--gray-dark);
+    max-width: 620px;
+    line-height: 1.7;
+    margin-bottom: 52px;
+  }
+
+  /* SERVICES */
+  .services-section { background: var(--off-white); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2px;
+    background: var(--gray-light);
+  }
+
+  .service-card {
+    background: var(--white);
+    padding: 36px 32px;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+  }
+
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-card:hover { box-shadow: 0 8px 32px rgba(0,40,58,0.08); }
+
+  .service-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--blue);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .service-icon svg { width: 22px; height: 22px; fill: none; stroke: var(--white); stroke-width: 1.5; }
+
+  .service-title {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--blue-deeper);
+    margin-bottom: 10px;
+    line-height: 1.25;
+  }
+
+  .service-desc {
+    font-size: 14px;
+    color: var(--gray-dark);
+    line-height: 1.65;
+    margin-bottom: 18px;
+  }
+
+  .service-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .service-tag {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding: 4px 9px;
+    background: var(--gold-pale);
+    color: #7a5f1a;
+    border: 1px solid rgba(201,168,77,0.3);
+  }
+
+  .services-cta {
+    margin-top: 36px;
+    text-align: center;
+  }
+
+  /* TOOLS */
+  .tools-section { background: var(--blue-deeper); }
+
+  .tools-section .section-eyebrow { color: var(--gold); }
+  .tools-section .section-eyebrow::after { background: var(--gold); }
+  .tools-section .section-title { color: var(--white); }
+  .tools-section .section-sub { color: rgba(255,255,255,0.65); }
+
+  .tools-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: rgba(255,255,255,0.06);
+  }
+
+  .tool-card {
+    background: rgba(0,40,58,0.7);
+    border: 1px solid rgba(201,168,77,0.15);
+    padding: 40px 36px;
+  }
+
+  .tool-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    background: var(--gold);
+    color: var(--blue-deeper);
+    margin-bottom: 18px;
+  }
+
+  .tool-title {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+
+  .tool-desc {
+    font-size: 14px;
+    color: rgba(255,255,255,0.62);
+    line-height: 1.65;
+  }
+
+  /* TRADE UPDATES */
+  .updates-section { background: var(--white); }
+
+  .updates-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  .updates-left { position: sticky; top: 88px; }
+
+  .update-card {
+    border-left: 3px solid var(--gold);
+    padding: 20px 24px;
+    margin-bottom: 2px;
+    background: var(--off-white);
+    transition: background 0.2s;
+    cursor: pointer;
+  }
+
+  .update-card:hover { background: var(--gold-pale); }
+
+  .update-date {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 6px;
+  }
+
+  .update-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--blue-deeper);
+    line-height: 1.4;
+    margin-bottom: 6px;
+  }
+
+  .update-excerpt {
+    font-size: 13px;
+    color: var(--gray-dark);
+    line-height: 1.6;
+  }
+
+  .update-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    margin-top: 10px;
+    background: var(--blue);
+    color: var(--white);
+  }
+
+  /* RESOURCES */
+  .resources-section { background: var(--off-white); }
+
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+  }
+
+  .resource-card {
+    background: var(--white);
+    border-top: 3px solid var(--blue);
+    padding: 28px 24px;
+  }
+
+  .resource-type {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+
+  .resource-title {
+    font-family: var(--font-display);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--blue-deeper);
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+
+  .resource-desc {
+    font-size: 13.5px;
+    color: var(--gray-dark);
+    line-height: 1.6;
+  }
+
+  /* WHY GHY */
+  .why-section { background: var(--white); }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 0;
+    border: 1px solid var(--gray-light);
+  }
+
+  .why-item {
+    padding: 32px 28px;
+    border-right: 1px solid var(--gray-light);
+    border-bottom: 1px solid var(--gray-light);
+    position: relative;
+  }
+
+  .why-item::after {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: transparent;
+    transition: background 0.2s;
+  }
+
+  .why-item:hover::after { background: var(--gold); }
+
+  .why-num {
+    font-family: var(--font-display);
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--gold-pale);
+    line-height: 1;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--gray-light);
+    padding-bottom: 12px;
+  }
+
+  .why-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--blue-deeper);
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+  }
+
+  .why-desc {
+    font-size: 13.5px;
+    color: var(--gray-dark);
+    line-height: 1.65;
+  }
+
+  /* RESULTS */
+  .results-section { background: var(--blue-deeper); }
+  .results-section .section-title { color: var(--white); }
+  .results-section .section-eyebrow { color: var(--gold); }
+  .results-section .section-eyebrow::after { background: var(--gold); }
+  .results-section .section-sub { color: rgba(255,255,255,0.65); }
+
+  .case-study-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(201,168,77,0.2);
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .case-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  .case-title {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.3;
+  }
+
+  .case-result {
+    font-family: var(--font-display);
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .case-result-label {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .case-desc {
+    font-size: 14.5px;
+    color: rgba(255,255,255,0.72);
+    line-height: 1.7;
+  }
+
+  /* LOGO BAR */
+  .logo-bar {
+    background: var(--gray-light);
+    padding: 40px;
+    text-align: center;
+  }
+
+  .logo-bar-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gray-mid);
+    margin-bottom: 28px;
+  }
+
+  .logo-bar-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+
+  .logo-placeholder {
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--gray-mid);
+    letter-spacing: 0.05em;
+    opacity: 0.7;
+  }
+
+  /* CTA FOOTER BAND */
+  .cta-band {
+    background: var(--blue);
+    padding: 72px 40px;
+    text-align: center;
+  }
+
+  .cta-band-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .cta-band-title {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 16px;
+    line-height: 1.15;
+  }
+
+  .cta-band-sub {
+    font-size: 16px;
+    color: rgba(255,255,255,0.72);
+    max-width: 540px;
+    margin: 0 auto 36px;
+    line-height: 1.7;
+  }
+
+  .cta-band-actions {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--blue-deeper);
+    border-top: 1px solid rgba(201,168,77,0.2);
+    padding: 48px 40px 28px;
+  }
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .footer-brand p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.7;
+    margin-top: 14px;
+    max-width: 280px;
+  }
+
+  .footer-col-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .footer-col a {
+    display: block;
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+    margin-bottom: 8px;
+    transition: color 0.2s;
+  }
+
+  .footer-col a:hover { color: var(--white); }
+
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+  }
+
+  .footer-bottom span { color: var(--gold); }
+
+  /* SCROLL ANIMATIONS */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-top">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-mark">GHY</div>
+      <div class="nav-logo-text">
+        International
+        <span>We Free Trade™</span>
+      </div>
+    </a>
+
+    <ul class="nav-main">
+
+      <!-- SERVICES -->
+      <li class="nav-item">
+        <a href="#">Services <span class="chevron"></span></a>
+        <div class="mega-menu" style="min-width:200px;">
+          <a href="#">Canadian Customs Brokerage</a>
+          <a href="#">US Customs Brokerage</a>
+          <a href="#">Trade Services</a>
+          <a href="#">GHY eBiz</a>
+          <a href="#">Freight Partnerships</a>
+        </div>
+      </li>
+
+      <!-- RESOURCES -->
+      <li class="nav-item">
+        <a href="#">Resources <span class="chevron"></span></a>
+        <div class="mega-menu" style="min-width:200px;">
+          <a href="#">Trade Updates</a>
+          <a href="#">Guides &amp; Whitepapers</a>
+          <a href="#">Case Studies</a>
+          <a href="#">Blog</a>
+          <a href="#">Forms</a>
+          <a href="#">On-Demand Webinars</a>
+        </div>
+      </li>
+
+      <!-- TOOLS -->
+      <li class="nav-item">
+        <a href="#">Tools <span class="chevron"></span></a>
+        <div class="mega-menu" style="min-width:180px;">
+          <a href="#">Tariff Calculator</a>
+          <a href="#">Refund Calculator</a>
+          <a href="#">Tariff Tracker</a>
+          <a href="#">GHY Classify</a>
+        </div>
+      </li>
+
+      <!-- COMPANY -->
+      <li class="nav-item">
+        <a href="#">Company <span class="chevron"></span></a>
+        <div class="mega-menu" style="min-width:190px;">
+          <a href="#">Events</a>
+          <a href="#">Who We Are</a>
+          <a href="#">Our Service Model</a>
+          <a href="#">History &amp; Legacy</a>
+          <a href="#">Leadership</a>
+          <a href="#">GHY Careers</a>
+          <a href="#">Media &amp; Press Room</a>
+          <a href="#">GHY Blue Guy</a>
+        </div>
+      </li>
+
+    </ul>
+
+    <div class="nav-right">
+      <a href="#" class="nav-item" style="color:rgba(255,255,255,0.6);font-size:12px;text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;">ghy.com</a>
+      <a href="#" class="nav-cta-btn" style="font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;padding:9px 18px;background:var(--gold);color:var(--blue-deeper);">Talk to a Client Care Associate</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-starfield"></div>
+  <div class="hero-stars"></div>
+  <div class="hero-grid-line"></div>
+  <div class="hero-1901-mark">
+    <span class="year">1901</span>
+    <span class="est">Est. Winnipeg, MB</span>
+  </div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">North America's Customs Broker</div>
+    <h1 class="hero-heading">We Free Trade.™</h1>
+    <p class="hero-tagline">Sole-focus brokerage. Since 1901.</p>
+    <p class="hero-sub">North America's sole-focus customs brokerage and trade compliance partner. Every tool, specialist, and decision exists for one purpose: to free the flow of your trade.</p>
+    <div class="hero-actions">
+      <a href="#" class="btn-primary">Talk to a Client Care Associate</a>
+      <a href="#" class="btn-outline">Explore Services</a>
+    </div>
+    <div class="hero-trust-bar">
+      <div class="trust-item">
+        <span class="trust-num">125+</span>
+        <span class="trust-label">Years in trade</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <span class="trust-num">4</span>
+        <span class="trust-label">Generations of family leadership</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <span class="trust-num">4,000+</span>
+        <span class="trust-label">Active clients</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <span class="trust-num">12</span>
+        <span class="trust-label">Offices across North America</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <span class="trust-num">99.5%</span>
+        <span class="trust-label">Entry accuracy rate</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GOLD FEATURE BAR -->
+<div class="feature-bar">
+  <div class="feature-bar-item">24/7/365 CBSA & CBP Clearance</div>
+  <div class="feature-bar-item">C-TPAT & PIP Certified</div>
+  <div class="feature-bar-item">Canada & US Licensed Brokers</div>
+  <div class="feature-bar-item">Sole-Focus Trade Compliance</div>
+  <div class="feature-bar-item">One Border. One Broker.™</div>
+</div>
+
+<!-- SERVICES -->
+<section class="services-section">
+  <div class="section-inner">
+    <div class="fade-up">
+      <div class="section-eyebrow">Our Services</div>
+      <h2 class="section-title">Sole-Focus Customs Brokerage<br>& Trade Services</h2>
+      <p class="section-sub">Unlike other brokers, customs brokerage and trade compliance are our only business — which is why North American importers choose us.</p>
+    </div>
+    <div class="services-grid fade-up">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="service-title">Canadian Customs Brokerage</div>
+        <p class="service-desc">Full-service CBSA clearance with dedicated Client Care Associates for every shipment mode and commodity.</p>
+        <div class="service-tags">
+          <span class="service-tag">24/7 CBSA Clearance</span>
+          <span class="service-tag">HS Classification</span>
+          <span class="service-tag">eManifest</span>
+          <span class="service-tag">CARM Management</span>
+          <span class="service-tag">OGD Coordination</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        </div>
+        <div class="service-title">US Customs Brokerage</div>
+        <p class="service-desc">Full-service licensed brokerage with dedicated Client Care Associates covering ISF 10+2, ABI entry filing, AES export reporting, and full duty reconciliation.</p>
+        <div class="service-tags">
+          <span class="service-tag">24/7 CBP Clearance</span>
+          <span class="service-tag">ISF/ABI Filing</span>
+          <span class="service-tag">HTS Classification</span>
+          <span class="service-tag">AES Export</span>
+          <span class="service-tag">PGA Coordination</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div class="service-title">Trade Services</div>
+        <p class="service-desc">The full scope of trade compliance — HS/HTS classification, FTA optimization, export compliance, and duty recovery through drawback, remission, and preferential programs.</p>
+        <div class="service-tags">
+          <span class="service-tag">Tariff Classification</span>
+          <span class="service-tag">USMCA · CPTPP · CETA</span>
+          <span class="service-tag">Duty Drawback</span>
+          <span class="service-tag">Duty Deferral</span>
+          <span class="service-tag">Valuation Reviews</span>
+          <span class="service-tag">Trade Consulting</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <div class="service-title">GHY eBiz</div>
+        <p class="service-desc">Purpose-built eCommerce customs solutions for low-value, small parcel, and direct-to-consumer shipments into Canada and the US, with landed cost calculation at checkout.</p>
+        <div class="service-tags">
+          <span class="service-tag">Low-Value Clearance</span>
+          <span class="service-tag">B2C & B2B eCommerce</span>
+          <span class="service-tag">Landed Cost at Checkout</span>
+          <span class="service-tag">Canada & US</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <div class="service-title">Freight Partnerships</div>
+        <p class="service-desc">GHY partners with freight forwarders, adding customs brokerage expertise that grows their service offering and deepens client loyalty — without the compliance overhead.</p>
+        <div class="service-tags">
+          <span class="service-tag">Freight Customs Brokerage</span>
+          <span class="service-tag">Freight-Customs Partnership</span>
+        </div>
+      </div>
+    </div>
+    <div class="services-cta fade-up">
+      <a href="#" class="btn-primary">Explore All Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRADE TOOLS -->
+<section class="tools-section">
+  <div class="section-inner">
+    <div class="fade-up">
+      <div class="section-eyebrow">Our Trade Tools</div>
+      <h2 class="section-title" style="color:var(--white);">Built for the Border.<br>Powered by GHY.</h2>
+      <p class="section-sub">Purpose-built technology that keeps your supply chain ahead of tariff changes and ensures accurate, defensible classification across both jurisdictions.</p>
+    </div>
+    <div class="tools-grid fade-up">
+      <div class="tool-card">
+        <div class="tool-badge">Classification Tool</div>
+        <div class="tool-title">GHY Classify</div>
+        <p class="tool-desc">Conditional logic classification technology that applies consistent, defensible HS (Canada) and HTS (US) classifications across your entire product catalog — with a built-in audit trail for every decision.</p>
+      </div>
+      <div class="tool-card">
+        <div class="tool-badge">Live Intelligence</div>
+        <div class="tool-title">GHY Tariff Tracker</div>
+        <p class="tool-desc">Real-time monitoring of tariff changes, CBSA and CBP regulatory updates, retaliatory measures, IEEPA rulings, Section 301/232 actions, and Canadian surtax orders — with expert commentary on what each change means for your imports.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRADE UPDATES -->
+<section class="updates-section">
+  <div class="section-inner">
+    <div class="updates-grid">
+      <div class="updates-left fade-up">
+        <div class="section-eyebrow">Trade Updates</div>
+        <h2 class="section-title">Expert Commentary on What Matters</h2>
+        <p style="font-size:15px;color:var(--gray-dark);line-height:1.7;margin-bottom:24px;">Tariffs shift. Trade agreements evolve. Regulations update. GHY's Trade Updates deliver timely, actionable analysis from specialists who understand what every change means for your business.</p>
+        <a href="#" class="btn-primary">Sign Up for Trade Alerts</a>
+      </div>
+      <div class="fade-up">
+        <div class="update-card">
+          <div class="update-date">April 14, 2026</div>
+          <div class="update-title">IEEPA Tariff Pause: What It Means for Canadian and US Importers</div>
+          <p class="update-excerpt">GHY's compliance team breaks down the 90-day tariff pause, which shipments qualify, and what importers should do before the window closes.</p>
+          <span class="update-tag">Tariffs</span>
+        </div>
+        <div class="update-card">
+          <div class="update-date">April 11, 2026</div>
+          <div class="update-title">Canadian Surtax Update: New Categories Effective May 1</div>
+          <p class="update-excerpt">CBSA has published the latest surtax schedule. GHY's specialists outline the impacted HS chapters and recommended importer actions.</p>
+          <span class="update-tag">CBSA</span>
+        </div>
+        <div class="update-card">
+          <div class="update-date">April 9, 2026</div>
+          <div class="update-title">USMCA Origin Verification: CBP Increases Audit Activity</div>
+          <p class="update-excerpt">CBP has stepped up USMCA preference claim verifications. Here's what documentation your compliance program needs to be ready.</p>
+          <span class="update-tag">FTAs</span>
+        </div>
+        <div class="update-card">
+          <div class="update-date">April 7, 2026</div>
+          <div class="update-title">Section 232 Steel & Aluminum: Derivative Product Scope Expanded</div>
+          <p class="update-excerpt">The latest CBP guidance expands the derivative product scope under Section 232. GHY's tariff team outlines which HTS codes are newly affected.</p>
+          <span class="update-tag">CBP</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section class="resources-section">
+  <div class="section-inner">
+    <div class="fade-up">
+      <div class="section-eyebrow">Trade Guides & Blog</div>
+      <h2 class="section-title">Resources for Smarter<br>Importing & Exporting</h2>
+      <p class="section-sub">Practical guidance from GHY specialists — built for importers, exporters, and trade compliance teams.</p>
+    </div>
+    <div class="resources-grid fade-up">
+      <div class="resource-card">
+        <div class="resource-type">Guide</div>
+        <div class="resource-title">The North American Importer's Guide to Tariff Classification</div>
+        <p class="resource-desc">HS vs HTS explained, how GHY Classify works, and why defensible classification matters more than ever in 2026.</p>
+      </div>
+      <div class="resource-card">
+        <div class="resource-type">Guide</div>
+        <div class="resource-title">USMCA/CUSMA Certificate of Origin: A Practical Compliance Guide</div>
+        <p class="resource-desc">How to qualify goods, prepare certificates, manage vendor coordination, and avoid the most common origin errors.</p>
+      </div>
+      <div class="resource-card">
+        <div class="resource-type">Blog</div>
+        <div class="resource-title">What Is Duty Drawback and Is Your Business Leaving Money on the Table?</div>
+        <p class="resource-desc">Most businesses eligible for drawback never claim it. GHY's duty recovery team explains how to identify and file.</p>
+      </div>
+      <div class="resource-card">
+        <div class="resource-type">Events</div>
+        <div class="resource-title">Trade Education & Industry Events</div>
+        <p class="resource-desc">GHY hosts and participates in webinars and workshops that keep North American trade professionals informed and prepared for regulatory change.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY GHY -->
+<section class="why-section">
+  <div class="section-inner">
+    <div class="fade-up">
+      <div class="section-eyebrow">Why GHY</div>
+      <h2 class="section-title">125 Years. Four Generations.<br>One Border.</h2>
+      <p class="section-sub">Founded in Winnipeg in 1901 — before the first commercial flight — GHY has kept traders moving across every generation of trade law. Our sole focus on customs brokerage means no divided priorities, ever.</p>
+    </div>
+    <div class="why-grid fade-up">
+      <div class="why-item">
+        <div class="why-num">01</div>
+        <div class="why-title">125+ Years of Experience</div>
+        <p class="why-desc">Deep regulatory knowledge built across every generation of trade law, from Canada's earliest Customs Acts to ACE, CARM, and modern supply chain compliance.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">02</div>
+        <div class="why-title">Sole Focus on Customs & Trade Compliance</div>
+        <p class="why-desc">No competing priorities. Your compliance is our only business, which is why our expertise runs deeper than any generalist provider.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">03</div>
+        <div class="why-title">Specialists Averaging 30+ Years of Experience</div>
+        <p class="why-desc">Tariff classification, valuation, and origin expertise that runs deep across our entire team — not just at the leadership level.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">04</div>
+        <div class="why-title">Free Trade Agreement Expertise</div>
+        <p class="why-desc">Duty savings unlocked through proper certificate management and proactive FTA monitoring across USMCA, CPTPP, CETA, and beyond.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">05</div>
+        <div class="why-title">24/7/365 Operations</div>
+        <p class="why-desc">The border doesn't stop — neither do we. Real-time support aligned with your shipment movement, every hour of every day.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">06</div>
+        <div class="why-title">Canada and US Offices</div>
+        <p class="why-desc">Coast-to-coast coverage with local expertise across every major Canada–US trade corridor.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">07</div>
+        <div class="why-title">C-TPAT & PIP Certified</div>
+        <p class="why-desc">Trusted trader status supports faster clearance and lower audit risk for clients at both borders.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">08</div>
+        <div class="why-title">C-Suite Reachable 24/7</div>
+        <p class="why-desc">When a moment of truth arrives, GHY leadership answers — including direct access to our CEO by cell, around the clock.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENT RESULTS -->
+<section class="results-section">
+  <div class="section-inner">
+    <div class="fade-up">
+      <div class="section-eyebrow">Client Results</div>
+      <h2 class="section-title" style="color:var(--white);">Real Results. Real Clients.</h2>
+      <p class="section-sub">How GHY helps North American importers reduce landed costs, resolve compliance challenges, and keep goods moving — across every commodity and every corridor.</p>
+    </div>
+    <div class="case-study-card fade-up">
+      <div>
+        <div class="case-label">Case Study</div>
+        <div class="case-title">Surtax Refund Recovery</div>
+      </div>
+      <div>
+        <div class="case-result">$—</div>
+        <div class="case-result-label">Recovered in surtax refunds</div>
+        <p class="case-desc">GHY's forensic review identified that a Canadian importer had been paying surtax on goods that qualified for an exemption under a published CBSA order. GHY prepared and filed the refund claims, recovered duties on affected entries, and updated the client's tariff profile to prevent recurrence — with zero disruption to ongoing clearance operations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGO BAR -->
+<div class="logo-bar">
+  <div class="logo-bar-label">Trusted by leading North American importers</div>
+  <div class="logo-bar-items">
+    <span class="logo-placeholder">Unilever</span>
+    <span class="logo-placeholder">New Flyer</span>
+    <span class="logo-placeholder">Price Industries</span>
+    <span class="logo-placeholder">Monache</span>
+    <span class="logo-placeholder">JELD-WEN</span>
+  </div>
+</div>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <div class="cta-band-eyebrow">Be Our Partner in Trade</div>
+  <h2 class="cta-band-title">One Border. One Broker.<br>Ready When You Are.</h2>
+  <p class="cta-band-sub">Whether you're a first-time importer or a multinational managing complex cross-border supply chains, GHY builds lasting partnerships based on accountability, transparency, and care.</p>
+  <div class="cta-band-actions">
+    <a href="#" class="btn-primary">Talk to a Client Care Associate</a>
+    <a href="#" class="btn-outline">Explore All Services</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top" style="grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr;">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
+          <div style="width:44px;height:44px;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:18px;color:var(--blue-deeper);">GHY</div>
+          <div>
+            <div style="font-family:var(--font-display);font-size:16px;font-weight:500;color:var(--white);">GHY International</div>
+            <div style="font-size:11px;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;">We Free Trade™</div>
+          </div>
+        </div>
+        <p style="font-size:13px;color:rgba(255,255,255,0.48);line-height:1.7;max-width:280px;">North America's sole-focus customs brokerage and trade compliance partner since 1901. Geo. H. Young & Co. Ltd. | GHY USA, Inc.</p>
+        <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap;">
+          <span style="font-size:11px;padding:4px 10px;background:rgba(201,168,77,0.12);color:var(--gold);border:1px solid rgba(201,168,77,0.25);letter-spacing:0.06em;text-transform:uppercase;">C-TPAT Certified</span>
+          <span style="font-size:11px;padding:4px 10px;background:rgba(201,168,77,0.12);color:var(--gold);border:1px solid rgba(201,168,77,0.25);letter-spacing:0.06em;text-transform:uppercase;">PIP Member</span>
+        </div>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-col">
+        <div class="footer-col-title">Services</div>
+        <a href="#">Canadian Customs Brokerage</a>
+        <a href="#">US Customs Brokerage</a>
+        <a href="#">Trade Services</a>
+        <a href="#">GHY eBiz</a>
+        <a href="#">Freight Partnerships</a>
+      </div>
+
+      <!-- Resources -->
+      <div class="footer-col">
+        <div class="footer-col-title">Resources</div>
+        <a href="#">Trade Updates</a>
+        <a href="#">Guides &amp; Whitepapers</a>
+        <a href="#">Case Studies</a>
+        <a href="#">Blog</a>
+        <a href="#">Forms</a>
+        <a href="#">On-Demand Webinars</a>
+      </div>
+
+      <!-- Tools -->
+      <div class="footer-col">
+        <div class="footer-col-title">Tools</div>
+        <a href="#">Tariff Calculator</a>
+        <a href="#">Refund Calculator</a>
+        <a href="#">Tariff Tracker</a>
+        <a href="#">GHY Classify</a>
+      </div>
+
+      <!-- Company -->
+      <div class="footer-col">
+        <div class="footer-col-title">Company</div>
+        <a href="#">Events</a>
+        <a href="#">Who We Are</a>
+        <a href="#">Our Service Model</a>
+        <a href="#">History &amp; Legacy</a>
+        <a href="#">Leadership</a>
+        <a href="#">GHY Careers</a>
+        <a href="#">Media &amp; Press Room</a>
+        <a href="#">GHY Blue Guy</a>
+      </div>
+
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>&copy; 2026 GHY International — Geo. H. Young & Co. Ltd. | GHY USA, Inc. &nbsp;<span>We Free Trade™</span></p>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;">
+        <a href="#" style="font-size:12px;color:rgba(255,255,255,0.35);text-decoration:none;">Privacy Policy</a>
+        <a href="#" style="font-size:12px;color:rgba(255,255,255,0.35);text-decoration:none;">Terms of Use</a>
+        <a href="#" style="font-size:12px;color:rgba(255,255,255,0.35);text-decoration:none;">Accessibility</a>
+        <span style="font-size:12px;color:rgba(255,255,255,0.25);">ghy.com</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
